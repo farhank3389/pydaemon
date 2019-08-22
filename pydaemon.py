@@ -196,8 +196,8 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-pidfile', action="store", dest="pid_file")
-    parser.add_argument('-action', action="store", dest="action", default="start")
+    parser.add_argument('-pidfile', action="store", dest="pid_file", required=True)
+    parser.add_argument('-action', action="store", dest="action", default="start", required=True)
     parser.add_argument('-loglevel', action="store", nargs="?", dest="logLevel", const="info", default="info", choices=["off", "debug", "info", "warning", "error", "critical"])
     args = parser.parse_args()
 
