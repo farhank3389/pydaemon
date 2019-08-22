@@ -184,12 +184,12 @@ def main(pid_file, *args, action="start", app=app, logLevel=logging.INFO, **kwar
         code = stop(pid_file)
     else:
         print("Action can only be start or stop")
+        code = 1
     
     if __name__ == "__main__":
         sys.exit(code)
     else:
         return code
-
     
 
 if __name__ == "__main__":
